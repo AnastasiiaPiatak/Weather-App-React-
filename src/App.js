@@ -1,6 +1,7 @@
 import Search from "./Search";
 import "./App.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCloudRain } from "@fortawesome/free-solid-svg-icons";
 
 export default function App() {
   return (
@@ -16,7 +17,7 @@ export default function App() {
           </div>
           <div className="main__containerWeather">
             <div className="main__containerWeather-icon">
-              <FontAwesomeIcon icon="fa-solid fa-cloud-rain" />{" "}
+              <FontAwesomeIcon icon={faCloudRain} />{" "}
             </div>
             <div className="main__containerWeather-description">Rainy</div>
           </div>
