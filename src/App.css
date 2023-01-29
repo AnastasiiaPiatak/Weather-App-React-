@@ -56,11 +56,9 @@ body {
   padding-left: 40px;
 }
 
-.main__containerWeather-icon{
-      font-size: 40px;
-        color: #d2e8e3;
-
-
+.main__containerWeather-icon {
+  font-size: 40px;
+  color: #d2e8e3;
 }
 
 .main__containerWeather-description {
@@ -87,8 +85,8 @@ body {
   outline: none;
   background-color: #106466;
   border: none;
-  border-bottom: 1px solid #D8B08C;
-  color: #FFCB9B;
+  border-bottom: 1px solid #d8b08c;
+  color: #ffcb9b;
   font-size: 15px;
 }
 
@@ -98,35 +96,52 @@ body {
   right: 0;
   width: 53px;
   height: 53px;
-  background-color: #D8B08C;
+  background-color: #d8b08c;
   border: none;
   font-size: 16px;
   cursor: pointer;
 }
 
-.addition__search > form > input:nth-child(2):hover{
+.addition__search > form > input:nth-child(2):hover {
   background-color: #d2e8e3;
 }
 
-.addition__cities p{
+.addition__cities p {
   margin-bottom: 20px;
-
 }
 
-.addition__cities p a{
+.addition__cities p a {
   color: #d2e8e3;
   text-decoration: none;
 }
 
-.addition hr{
+.addition hr {
   width: 90%;
-  border-color: #D8B08C;
-  
+  border-color: #d8b08c;
 }
 
-.addition__description div{
+.addition__description div {
   display: flex;
   justify-content: space-between;
   margin: 10px 12px 10px 0;
-  color: #D2E8E3;
+  color: #d2e8e3;
+}
+
+/* Link */
+
+.gitHub{
+  text-align: center;
+  color: #2c3532;
+}
+
+.gitHub a {
+  text-decoration: none;
+    color: #d8b08c;
+
+}
+
+.gitHub a:hover {
+  text-decoration: underline;
+    color: #106466;
+
 }
