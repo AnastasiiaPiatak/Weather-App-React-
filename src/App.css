@@ -157,4 +157,9 @@ body {
   .main__containerInfo-date {
     font-size: 13px;
   }
+
+  .main__container{
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex-direction: column-reverse;}
 }
