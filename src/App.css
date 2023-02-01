@@ -71,11 +71,10 @@ body {
   background-color: #106466;
   padding-left: 25px;
 }
-.addition__container{
+.addition__container {
   width: 100%;
   padding: 20px 20px;
 }
-
 
 .addition__search {
   position: relative;
@@ -147,4 +146,15 @@ body {
   color: #106466;
 }
 
+@media (max-width: 400px) {
+  .main__containerTemperature {
+    font-size: 80px;
+  }
+  .main__containerInfo-city{
+    font-size: 50px;
+  }
 
+  .main__containerInfo-date {
+    font-size: 13px;
+  }
+}
