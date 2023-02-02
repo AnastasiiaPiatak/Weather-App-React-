@@ -62,6 +62,7 @@ body {
 .main__containerWeather-description {
   font-size: 16px;
   color: #d8b08c;
+  text-transform: capitalize;
 }
 
 /* Addition */
@@ -150,7 +151,7 @@ body {
   .main__containerTemperature {
     font-size: 80px;
   }
-  .main__containerInfo-city{
+  .main__containerInfo-city {
     font-size: 50px;
   }
 
@@ -158,8 +159,9 @@ body {
     font-size: 13px;
   }
 
-  .main__container{
+  .main__container {
     justify-content: flex-start;
     align-items: flex-end;
-    flex-direction: column-reverse;}
+    flex-direction: column-reverse;
+  }
 }
