@@ -3,19 +3,19 @@ import Search from "./Search";
 import "./Weather.css";
 import axios from "axios";
 import DateInfo from "./DateInfo";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCloudRain } from "@fortawesome/free-solid-svg-icons";
+import SourceLink from "./SourceLink";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faCloudRain } from "@fortawesome/free-solid-svg-icons";
 
 export default function Weather(props) {
   let [weather, setWeather] = useState({ loaded: false });
 
   function handleResponse(response) {
-    console.log(response.data);
     setWeather({
       loaded: true,
       temperature: Math.round(response.data.temperature.current),
       city: response.data.city,
-      date: new Date(response.data.time*1000),
+      date: new Date(response.data.time * 1000),
       description: response.data.condition.description,
       feeling: Math.round(response.data.temperature.feels_like),
       humidity: Math.round(response.data.temperature.humidity),
@@ -40,8 +40,7 @@ export default function Weather(props) {
                   <div className="main__containerInfo-city">{weather.city}</div>
 
                   <div className="main__containerInfo-date">
-                    <DateInfo date={weather.date}/>
-                    {/* 06:09 - Saturday, 26 Jan `23 */}
+                    <DateInfo date={weather.date} />
                   </div>
                 </div>
 
@@ -59,7 +58,7 @@ export default function Weather(props) {
             <div className="addition col-sm-3">
               <div className="addition_container ps-3">
                 <div className="addition__search">
-                  <Search />
+                  <Search city={props.defaultCity} />
                 </div>
 
                 <div className="addition__cities">
@@ -101,16 +100,7 @@ export default function Weather(props) {
           </div>
         </div>
 
-        <div className="gitHub">
-          <a
-            href="https://github.com/AnastasiiaPiatak/weather-app-react"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Open-source code
-          </a>{" "}
-          by Anastasiia Piatak
-        </div>
+        <SourceLink/>
       </div>
     );
   } else {

@@ -1,12 +1,19 @@
 import React from "react";
-import "./Weather";
+import "./Weather.css";
 
+export default function Search(props) {
+  
 
-export default function Search(){
-    return (
-      <form >
-        <input type="search" placeholder="Another location"/>
-        <input type="submit" value="🔍" />
-      </form>
-    );
+  return (
+    <div className="Search">
+    <form >
+      <input
+        type="search"
+        placeholder="Another location"
+        
+      />
+      <input type="submit" value="🔍" />
+    </form>
+    </div>
+  );
 }

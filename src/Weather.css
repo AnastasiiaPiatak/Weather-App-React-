@@ -81,7 +81,7 @@ body {
   position: relative;
 }
 
-.addition__search > form > input:nth-child(1) {
+.addition__search form > input:nth-child(1) {
   margin: 30px 15px 20px 0;
   padding-bottom: 5px;
   width: 70%;
@@ -93,7 +93,7 @@ body {
   font-size: 15px;
 }
 
-.addition__search > form > input:nth-child(2) {
+.addition__search  form > input:nth-child(2) {
   position: absolute;
   top: 0;
   right: 0;
@@ -105,7 +105,7 @@ body {
   cursor: pointer;
 }
 
-.addition__search > form > input:nth-child(2):hover {
+.addition__search  form > input:nth-child(2):hover {
   background-color: #d2e8e3;
 }
 
@@ -132,17 +132,17 @@ body {
 
 /* Link */
 
-.gitHub {
+.SourceLink {
   text-align: center;
   color: #2c3532;
 }
 
-.gitHub a {
+.SourceLink a {
   text-decoration: none;
   color: #d8b08c;
 }
 
-.gitHub a:hover {
+.SourceLink a:hover {
   text-decoration: underline;
   color: #106466;
 }
