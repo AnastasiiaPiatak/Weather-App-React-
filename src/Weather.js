@@ -76,7 +76,7 @@ export default function Weather(props) {
                 <div className="addition__description">
                   <div className="addition__description-cloudy">
                     <div>Feels like</div>
-                    <div>{weather.feeling}°</div>
+                    <div>{weather.feeling}°C</div>
                   </div>
 
                   <div className="addition__description-humidity">

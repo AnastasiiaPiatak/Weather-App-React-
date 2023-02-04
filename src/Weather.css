@@ -31,12 +31,15 @@ body {
 
 .main__containerTemperature {
   font-size: 100px;
+    font-weight: 100;
+
   color: #ffcb9b;
 }
 
 .main__containerTemperature a{
-  font-size: 95px;
+  font-size: 100px;
   color: #ffcb9b;
+  font-weight: 100;
   text-decoration: none;
 }
 
