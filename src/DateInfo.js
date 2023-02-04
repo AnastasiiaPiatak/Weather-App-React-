@@ -1,8 +1,7 @@
 import React from "react";
-import { renderIntoDocument } from "react-dom/test-utils";
+import "./Weather.css";
 
 export default function DateInfo(props) {
-  console.log(props.date);
   let days = [
     "Sunday",
     "Monday",
@@ -11,7 +10,8 @@ export default function DateInfo(props) {
     "Thursday",
     "Friday",
     "Saturday",
-  ];
+  ]; 
+  let day = days[props.date.getDay()];
 
   let months = [
     "Jan",
@@ -27,11 +27,10 @@ export default function DateInfo(props) {
     "Nov",
     "Dec",
   ];
-  let day = days[props.date.getDay()];
+
+ 
   let month = months[props.date.getMonth()];
   let date = props.date.getDate();
-  console.log(date);
-
   let year = props.date.getFullYear().toString().substring(2);
   let hours = props.date.getHours();
   if (hours < 10) {
@@ -42,5 +41,6 @@ export default function DateInfo(props) {
     minutes = `0${minutes}`;
   }
 
-  return `${hours}:${minutes} - ${day}, ${date} ${month} \`${year}`;
+  return (
+  <span> {hours}:{minutes} - {day}, {date} {month} `{year}</span>);
 }

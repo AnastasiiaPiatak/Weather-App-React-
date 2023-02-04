@@ -1,18 +1,16 @@
 import React, { useState } from "react";
-import Search from "./Search";
 import "./Weather.css";
 import axios from "axios";
-import DateInfo from "./DateInfo";
+import WeatherMain from "./WeatherMain";
 import SourceLink from "./SourceLink";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faCloudRain } from "@fortawesome/free-solid-svg-icons";
 
 export default function Weather(props) {
   let [weather, setWeather] = useState({ loaded: false });
+  let [city, setCity] = useState(props.defaultCity);
 
-  function handleResponse(response) {
+  function handleResponse(response) {console.log(response.data);
     setWeather({
-      loaded: true,
+      loaded: true,    
       temperature: Math.round(response.data.temperature.current),
       city: response.data.city,
       date: new Date(response.data.time * 1000),
@@ -21,9 +19,22 @@ export default function Weather(props) {
       humidity: Math.round(response.data.temperature.humidity),
       wind: Math.round(response.data.wind.speed),
       icon: response.data.condition.icon_url,
-
-      // rain: Math.round(response.data.temperature.rain)
     });
+  }
+
+  function searchCity() {
+    const apiKey = `c6o2a4403fb65ced4d0bd7bea2650b1t`;
+    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault(); 
+    searchCity();      
+  }
+
+  function handleCity(event) {
+    setCity(event.target.value);
   }
 
   if (weather.loaded) {
@@ -31,34 +42,20 @@ export default function Weather(props) {
       <div className="Weather">
         <div className="container">
           <div className="row align-items-center justify-content-center g-0">
-            <div className="main col-sm-6">
-              <div className="main__container">
-                <div className="main__containerTemperature">
-                  {weather.temperature}°
-                </div>
-                <div className="main__containerInfo">
-                  <div className="main__containerInfo-city">{weather.city}</div>
-
-                  <div className="main__containerInfo-date">
-                    <DateInfo date={weather.date} />
-                  </div>
-                </div>
-
-                <div className="main__containerWeather">
-                  <div className="main__containerWeather-icon">
-                    <img src={weather.icon} alt={weather.description} />
-                  </div>
-
-                  <div className="main__containerWeather-description">
-                    {weather.description}
-                  </div>
-                </div>
-              </div>
-            </div>
+             <WeatherMain data = {weather}/>
             <div className="addition col-sm-3">
               <div className="addition_container ps-3">
                 <div className="addition__search">
-                  <Search city={props.defaultCity} />
+                  <div className="Search">
+                    <form onSubmit={handleSubmit}>
+                      <input
+                        type="search"
+                        placeholder="Another location"
+                        onChange={handleCity}
+                      />
+                      <input type="submit" value="🔍" />
+                    </form>
+                  </div>
                 </div>
 
                 <div className="addition__cities">
@@ -100,14 +97,11 @@ export default function Weather(props) {
           </div>
         </div>
 
-        <SourceLink/>
+        <SourceLink />
       </div>
     );
   } else {
-    const apiKey = `c6o2a4403fb65ced4d0bd7bea2650b1t`;
-    let city = props.defaultCity;
-    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(handleResponse);
+    searchCity();
     return "Loading..";
   }
 }
