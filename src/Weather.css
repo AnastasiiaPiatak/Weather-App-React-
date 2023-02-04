@@ -34,6 +34,16 @@ body {
   color: #ffcb9b;
 }
 
+.main__containerTemperature a{
+  font-size: 95px;
+  color: #ffcb9b;
+  text-decoration: none;
+}
+
+.main__containerTemperature a:hover{
+  color: #d2e8e3;
+}
+
 .main__containerInfo-city {
   font-size: 60px;
   color: #d2e8e3;

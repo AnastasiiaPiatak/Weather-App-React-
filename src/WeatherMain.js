@@ -1,13 +1,15 @@
 import React from "react";
 import DateInfo from "./DateInfo";
+import MainTemperature from "./MainTemperature";
 
 export default function WeatherMain(props){
     return (
       <div className="main col-sm-6 WeatherMain">
         <div className="main__container">
-          <div className="main__containerTemperature">
+          <MainTemperature celsius = {props.data.temperature}/>
+          {/* <div className="main__containerTemperature">
             {props.data.temperature}<span>°</span>
-          </div>
+          </div> */}
           <div className="main__containerInfo">
             <div className="main__containerInfo-city">{props.data.city}</div>
 
