@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Weather.css";
 import axios from "axios";
 import WeatherMain from "./WeatherMain";
+import WeatherForecast from "./WeatherForecast";
 import SourceLink from "./SourceLink";
 
 export default function Weather(props) {
@@ -97,6 +98,7 @@ export default function Weather(props) {
           </div>
         </div>
 
+      <WeatherForecast/>
         <SourceLink />
       </div>
     );

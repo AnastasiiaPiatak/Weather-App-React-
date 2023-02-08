@@ -143,6 +143,27 @@ body {
   color: #d2e8e3;
 }
 
+/* Weather Forecast */
+
+.WeatherForecast{
+  color: #d2e8e3;
+  margin: 50px auto;
+}
+
+.card-body{  
+
+  text-align: center;  
+  background-color: #2c3532;
+
+}
+
+
+.day__temperature span{
+  color:#ffcb9b;
+}
+
+
+
 /* Link */
 
 .SourceLink {
@@ -160,7 +181,7 @@ body {
   color: #106466;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 415px) {
   .main__containerTemperature {
     font-size: 80px;
   }
