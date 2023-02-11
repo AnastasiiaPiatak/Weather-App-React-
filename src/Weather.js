@@ -98,7 +98,7 @@ export default function Weather(props) {
           </div>
         </div>
 
-      <WeatherForecast city = {weather.city}/>
+      <WeatherForecast data = {weather}/>
         <SourceLink />
       </div>
     );
