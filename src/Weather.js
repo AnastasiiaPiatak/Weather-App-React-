@@ -9,9 +9,9 @@ export default function Weather(props) {
   let [weather, setWeather] = useState({ loaded: false });
   let [city, setCity] = useState(props.defaultCity);
 
-  function handleResponse(response) {console.log(response.data);
+  function handleResponse(response) {
     setWeather({
-      loaded: true,    
+      loaded: true,
       temperature: Math.round(response.data.temperature.current),
       city: response.data.city,
       date: new Date(response.data.time * 1000),
@@ -30,8 +30,8 @@ export default function Weather(props) {
   }
 
   function handleSubmit(event) {
-    event.preventDefault(); 
-    searchCity();      
+    event.preventDefault();
+    searchCity();
   }
 
   function handleCity(event) {
@@ -43,7 +43,7 @@ export default function Weather(props) {
       <div className="Weather">
         <div className="container">
           <div className="row align-items-center justify-content-center g-0">
-             <WeatherMain data = {weather}/>
+            <WeatherMain data={weather} />
             <div className="addition col-sm-3">
               <div className="addition_container ps-3">
                 <div className="addition__search">
@@ -98,7 +98,7 @@ export default function Weather(props) {
           </div>
         </div>
 
-      <WeatherForecast data = {weather}/>
+        <WeatherForecast data={weather} />
         <SourceLink />
       </div>
     );

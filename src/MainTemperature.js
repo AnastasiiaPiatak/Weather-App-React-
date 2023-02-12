@@ -30,7 +30,7 @@ export default function MainTemperature(props) {
     return (
       <div className="main__containerTemperature MainTemperature">
         {Math.round(fahrenheit())}
-        <a href="/" onClick={convertCels} >
+        <a href="/" onClick={convertCels}>
           °F
         </a>
       </div>
