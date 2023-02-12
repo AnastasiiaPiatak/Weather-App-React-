@@ -32,19 +32,8 @@ body {
 .main__containerTemperature {
   font-size: 100px;
   font-weight: 100;
-
+  margin: 0 10px;
   color: #ffcb9b;
-}
-
-.main__containerTemperature a {
-  font-size: 100px;
-  color: #ffcb9b;
-  font-weight: 100;
-  text-decoration: none;
-}
-
-.main__containerTemperature a:hover {
-  color: #d2e8e3;
 }
 
 .main__containerInfo-city {
@@ -67,15 +56,17 @@ body {
   padding-left: 40px;
 }
 
-.main__containerWeather-icon {
-  font-size: 40px;
-  color: #d2e8e3;
+.main__containerWeather-icon img{
+  margin: 0 auto;
+  display: block;
 }
 
 .main__containerWeather-description {
   font-size: 16px;
   color: #d8b08c;
   text-transform: capitalize;
+  word-break: break-word;
+  text-align: center;
 }
 
 /* Addition */
@@ -122,25 +113,12 @@ body {
   background-color: #d2e8e3;
 }
 
-.addition__cities p {
-  margin-bottom: 20px;
-}
-
-.addition__cities p a {
-  color: #d2e8e3;
-  text-decoration: none;
-}
-
-.addition hr {
-  width: 90%;
-  border-color: #d8b08c;
-}
-
 .addition__description div {
   display: flex;
   justify-content: space-between;
   margin: 10px 12px 10px 0;
   color: #d2e8e3;
+  font-size: 16px;
 }
 
 /* Weather Forecast */
@@ -154,6 +132,10 @@ body {
   text-align: center;
   background-color: #2c3532;
 }
+
+/* .day__emoji img{
+  width: 100%;
+} */
 
 .day__temperature span {
   color: #ffcb9b;
@@ -193,4 +175,40 @@ body {
     align-items: flex-end;
     flex-direction: column-reverse;
   }
+}
+
+@media (min-width:768px) and (max-width:1200px){
+    .main__container {
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex-direction: column-reverse;
+  }
+
+  .addition__search form > input:nth-child(1) {
+  margin: 20px 15px 20px 0;
+    padding-bottom: 5px;
+    width: 69%;
+    outline: none;
+    background-color: #106466;
+    border: none;
+    border-bottom: 1px solid #d8b08c;
+    color: #ffcb9b;
+    font-size: 13px;
+  }
+
+  .addition__search form > input:nth-child(2){
+    width: 45px;
+    height: 45px;
+  }
+
+  .addition__description div{
+    font-size: 15px;
+  }
+
+}
+
+@media (min-width:576px) and (max-width:1201px){
+.day__emoji img{
+  width: 100%;
+}
 }

@@ -46,7 +46,7 @@ export default function Weather(props) {
         <div className="container">
           <div className="row align-items-center justify-content-center g-0">
             <WeatherMain data={weather} />
-            <div className="addition col-sm-3">
+            <div className="addition col-md-3">
               <div className="addition_container ps-3">
                 <div className="addition__search">
                   <div className="Search">

@@ -4,7 +4,7 @@ import MainTemperature from "./MainTemperature";
 
 export default function WeatherMain(props) {
   return (
-    <div className="main col-sm-6 WeatherMain">
+    <div className="main col-md-6 WeatherMain">
       <div className="main__container">
         <MainTemperature celsius={props.data.temperature} />
 
