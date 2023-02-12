@@ -9,7 +9,8 @@ export default function Weather(props) {
   let [weather, setWeather] = useState({ loaded: false });
   let [city, setCity] = useState(props.defaultCity);
 
-  function handleResponse(response) {
+  function handleResponse(response) {      console.log(response.data);
+
     setWeather({
       loaded: true,
       temperature: Math.round(response.data.temperature.current),
@@ -20,6 +21,7 @@ export default function Weather(props) {
       humidity: Math.round(response.data.temperature.humidity),
       wind: Math.round(response.data.wind.speed),
       icon: response.data.condition.icon_url,
+      pressure:response.data.temperature.pressure,
     });
   }
 
@@ -59,25 +61,10 @@ export default function Weather(props) {
                   </div>
                 </div>
 
-                <div className="addition__cities">
-                  <p>
-                    <a href="/">Paris</a>
-                  </p>
-
-                  <p>
-                    <a href="/">Kyiv</a>
-                  </p>
-
-                  <p>
-                    <a href="/">Berlin</a>
-                  </p>
-                </div>
-                <hr />
-
                 <div className="addition__description">
                   <div className="addition__description-cloudy">
                     <div>Feels like</div>
-                    <div>{weather.feeling}°C</div>
+                    <div>{weather.feeling} °C</div>
                   </div>
 
                   <div className="addition__description-humidity">
@@ -89,8 +76,8 @@ export default function Weather(props) {
                     <div>{weather.wind} km/h</div>
                   </div>
                   <div className="addition__description-rain">
-                    <div>Rain</div>
-                    <div>8 mm</div>
+                    <div>Pressure</div>
+                    <div>{weather.pressure} hPa</div>
                   </div>
                 </div>
               </div>
