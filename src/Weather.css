@@ -31,19 +31,19 @@ body {
 
 .main__containerTemperature {
   font-size: 100px;
-    font-weight: 100;
+  font-weight: 100;
 
   color: #ffcb9b;
 }
 
-.main__containerTemperature a{
+.main__containerTemperature a {
   font-size: 100px;
   color: #ffcb9b;
   font-weight: 100;
   text-decoration: none;
 }
 
-.main__containerTemperature a:hover{
+.main__containerTemperature a:hover {
   color: #d2e8e3;
 }
 
@@ -106,7 +106,7 @@ body {
   font-size: 15px;
 }
 
-.addition__search  form > input:nth-child(2) {
+.addition__search form > input:nth-child(2) {
   position: absolute;
   top: 0;
   right: 0;
@@ -118,7 +118,7 @@ body {
   cursor: pointer;
 }
 
-.addition__search  form > input:nth-child(2):hover {
+.addition__search form > input:nth-child(2):hover {
   background-color: #d2e8e3;
 }
 
@@ -145,24 +145,19 @@ body {
 
 /* Weather Forecast */
 
-.WeatherForecast{
+.WeatherForecast {
   color: #d2e8e3;
   margin: 50px auto;
 }
 
-.card-body{  
-
-  text-align: center;  
+.card-body {
+  text-align: center;
   background-color: #2c3532;
-
 }
 
-
-.day__temperature span{
-  color:#ffcb9b;
+.day__temperature span {
+  color: #ffcb9b;
 }
-
-
 
 /* Link */
 
