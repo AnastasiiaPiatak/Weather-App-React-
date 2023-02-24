@@ -8,3 +8,6 @@ Technologies used:
 2. Bootstrap;
 3. React;
 4. SheCodes Weather API;
+
+Site URL:
+https://ap-weather-app-react.netlify.app/
